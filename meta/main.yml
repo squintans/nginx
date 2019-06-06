@@ -13,7 +13,6 @@ galaxy_info:
         - 6
     - name: Ubuntu
       versions:
-        - disco
         - cosmic
         - bionic
   galaxy_tags:
