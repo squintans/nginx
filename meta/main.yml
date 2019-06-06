@@ -1,0 +1,22 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: squintans
+  description: Simple nginx installation from official repo.
+  license: "license (GPLv2)"
+  min_ansible_version: 2.6
+  platforms:
+    - name: EL
+      versions:
+        - 7
+        - 6
+    - name: Ubuntu
+      versions:
+        - disco
+        - cosmic
+        - bionic
+  galaxy_tags:
+    - nginx
+    - webserver
+    - web

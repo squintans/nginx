@@ -1,0 +1,18 @@
+---
+- name: Apt
+  block:
+    - name: Add software-properties-common
+      apt:
+        name: software-properties-common
+        state: present
+        update_cache: yes
+
+    - name: Add Nginx repo
+      apt_repository:
+        repo: ppa:nginx/mainline
+        state: present
+
+    - name: Install Nginx
+      apt: 
+        name: "{{ packages }}"
+        update_cache: yes

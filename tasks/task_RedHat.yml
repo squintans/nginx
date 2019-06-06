@@ -1,0 +1,25 @@
+---
+- name: Yum
+  block:
+    - name: Add nginx repo
+      yum_repository:
+        name: nginx
+        description: nginx YUM Repo
+        baseurl: "http://nginx.org/packages/mainline/centos/{{ ansible_distribution_major_version }}/$basearch/"
+        gpgcheck: no
+        enabled: yes
+      when: ansible_distribution == 'CentOS'
+
+    - name: Add nginx repo
+      yum_repository:
+        name: nginx
+        description: nginx YUM Repo
+        baseurl: "http://nginx.org/packages/mainline/rhel/{{ ansible_distribution_major_version }}/$basearch/"
+        gpgcheck: no
+        enabled: yes
+      when: ansible_distribution == 'RedHat'
+    
+    - name: Install Nginx
+      yum: 
+        name: "{{ packages }}"
+        update_cache: yes  
