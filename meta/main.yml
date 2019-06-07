@@ -3,7 +3,7 @@ dependencies: []
 
 galaxy_info:
   author: squintans
-  description: Simple nginx installation from official repo.
+  description: Simple Nginx installation from official repo.
   license: "license (GPLv2)"
   min_ansible_version: 2.6
   platforms:
