@@ -14,5 +14,5 @@
 
     - name: Install Nginx
       apt: 
-        name: "{{ packages }}"
+        name: "{{ nginx_packages }}"
         update_cache: yes
