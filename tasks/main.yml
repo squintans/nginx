@@ -23,4 +23,4 @@
 - name: Nginx Verify port 80
   wait_for:
     port: 80
-    timeout: 1
+    timeout: 2
