@@ -18,3 +18,9 @@
     name: nginx
     state: started
     enabled: yes
+
+# Nginx Verify is listening on port 80
+- name: Nginx Verify port 80
+  wait_for:
+    port: 80
+    timeout: 1
